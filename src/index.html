@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Card Patients</title>
+    <link rel="shortcut icon" href="./assets/card.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./index.css" />
+    <script src="./index.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <header>
+        <div class="input">
+          <label for="search">Search</label>
+          <input type="text" id="search" placeholder="Khoj the search" />
+        </div>
+
+        <div class="input">
+          <label for="sortBy">Sort By</label>
+          <select id="sortBy">
+            <option value="id">ID</option>
+            <option value="id_rev" selected>ID (Rev)</option>
+            <option value="name">Name</option>
+            <option value="name_rev">Name (Rev)</option>
+            <option value="card_no">Card No</option>
+            <option value="card_no_rev">card No (Rev)</option>
+          </select>
+        </div>
+
+        <div class="input">
+          <label for="displayPerPage">Show</label>
+          <select id="displayPerPage">
+            <option value="50">50</option>
+            <option value="100" selected>100</option>
+            <option value="200">200</option>
+            <option value="500">500</option>
+            <option value="1000">1000</option>
+          </select>
+        </div>
+
+        <div class="input">
+          <label for="gotoPage"
+            >Goto (Total Page <span id="totalPage"></span>)</label
+          >
+          <input type="text" id="gotoPage" class="short" value="1" />
+        </div>
+      </header>
+      <div class="table">
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Card No.</th>
+              <th>Name</th>
+              <th>Address</th>
+              <th>Mobile</th>
+              <th>NID</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </main>
+    <aside>
+      <div class="input">
+        <label for="patientId">ID</label>
+        <input type="text" id="patientId" class="short" disabled />
+      </div>
+
+      <div class="input">
+        <label for="patientCardNo">Card No</label>
+        <input type="text" id="patientCardNo" />
+      </div>
+
+      <div class="input">
+        <label for="patientName">Name</label>
+        <input type="text" id="patientName" />
+      </div>
+
+      <div class="input">
+        <label for="patientMobile">Mobile</label>
+        <input type="text" id="patientMobile" />
+      </div>
+
+      <div class="input">
+        <label for="patientNid">NID</label>
+        <input type="text" id="patientNid" />
+      </div>
+
+      <div class="input">
+        <label for="patientAddress">Address</label>
+        <input type="text" id="patientAddress" />
+      </div>
+
+      <div class="input">
+        <button id="patientSave">Save</button>
+      </div>
+
+      <div class="input">
+        <button id="changePassword">Change Password</button>
+        <button id="backup">BackUp Database</button>
+      </div>
+    </aside>
+
+    <div id="Messege" class="hidden">
+      <header>
+        <h1></h1>
+        <hr />
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          height="20px"
+          viewBox="0 -960 960 960"
+          width="20px"
+          fill="#FFFFFF"
+        >
+          <path
+            d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
+          />
+        </svg>
+      </header>
+      <main>
+        <p></p>
+      </main>
+    </div>
+
+    <dialog id="editPatient">
+      <div class="wrapper">
+        <div class="input">
+          <label for="editPatientId">ID</label>
+          <input type="text" id="editPatientId" class="short" disabled />
+        </div>
+
+        <div class="input">
+          <label for="editPatientCardNo">Card No</label>
+          <input type="text" id="editPatientCardNo" />
+        </div>
+
+        <div class="input">
+          <label for="editPatientName">Name</label>
+          <input type="text" id="editPatientName" />
+        </div>
+
+        <div class="input">
+          <label for="editPatientMobile">Mobile</label>
+          <input type="text" id="editPatientMobile" />
+        </div>
+
+        <div class="input">
+          <label for="editPatientNid">NID</label>
+          <input type="text" id="editPatientNid" />
+        </div>
+
+        <div class="input">
+          <label for="editPatientAddress">Address</label>
+          <input type="text" id="editPatientAddress" />
+        </div>
+
+        <div class="input flex">
+          <button id="editPatientCancel" class="outline-btn">Cancel</button>
+          <button id="editPatientSave">Save</button>
+        </div>
+      </div>
+    </dialog>
+
+    <dialog id="editPassword">
+      <div class="input">
+        <label for="username">Username</label>
+        <input type="text" id="username" />
+      </div>
+
+      <div class="input">
+        <label for="oldPassword">Old Password</label>
+        <input type="text" id="oldPassword" />
+      </div>
+
+      <div class="input">
+        <label for="newPassword">New Password</label>
+        <input type="text" id="newPassword" />
+      </div>
+
+      <div class="input flex">
+        <button class="outline-btn" id="editPasswordCancel">Cancel</button>
+        <button id="editPasswordOk">Save</button>
+      </div>
+    </dialog>
+  </body>
+</html>

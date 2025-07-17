@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="shortcut icon" href="./assets/card.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./login.css" />
+    <script src="./login.js" defer></script>
+  </head>
+  <body>
+    <div class="login">
+      <header>
+        <h1>Login</h1>
+        <hr />
+      </header>
+
+      <div class="input">
+        <label for="username">Username</label>
+        <input id="username" type="text" placeholder="Username" />
+      </div>
+
+      <div class="input">
+        <label for="password">Password</label>
+        <input id="password" type="password" placeholder="Password" />
+      </div>
+
+      <div class="input">
+        <input type="checkbox" id="togglePassword" />
+        <label for="togglePassword">Show Password</label>
+      </div>
+
+      <div class="input">
+        <button id="login">Login</button>
+      </div>
+    </div>
+
+    <div id="Messege" class="hidden">
+      <header>
+        <h1></h1>
+        <hr />
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          height="20px"
+          viewBox="0 -960 960 960"
+          width="20px"
+          fill="#FFFFFF"
+        >
+          <path
+            d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
+          />
+        </svg>
+      </header>
+      <main>
+        <p></p>
+      </main>
+    </div>
+  </body>
+</html>

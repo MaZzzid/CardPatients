@@ -1,0 +1,130 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #3b3b3b;
+  overflow: hidden;
+}
+
+input {
+  padding: 6px;
+}
+
+button {
+  font-size: 15px;
+  padding: 6px 1.5rem;
+  color: #fff;
+  background-color: #003c96;
+  border: none;
+  border-radius: 4px;
+}
+
+button:hover {
+  background-color: #004ab9;
+}
+
+button:active {
+  background-color: #002864;
+  scale: 0.99;
+}
+
+label {
+  font-size: 14px;
+}
+
+.login {
+  width: 320px;
+  padding: 10px;
+  margin-bottom: 4rem;
+  font-family: sans-serif;
+  border: 1px solid #000;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 0 5px #575757;
+  user-select: none;
+
+  h1 {
+    margin-block: 10px;
+    text-align: center;
+  }
+
+  .input:not(:last-of-type) {
+    margin-bottom: 6px;
+  }
+
+  .input:nth-child(2),
+  .input:nth-child(3),
+  .input:nth-child(5) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  button {
+    margin-left: auto;
+  }
+}
+
+.hidden {
+  display: none !important;
+}
+
+#Messege {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  color: #fff;
+  background-color: #000;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  padding: 10px 16px;
+  font-family: sans-serif;
+
+  animation: showMessege 400ms ease-in-out forwards;
+
+  svg {
+    position: absolute;
+
+    top: 6px;
+    right: 6px;
+
+    &:hover {
+      fill: red;
+    }
+  }
+
+  h1,
+  hr,
+  p {
+    margin: 0;
+  }
+
+  h1 {
+    font-size: 1.4rem;
+    margin-right: 1.5rem;
+  }
+
+  p {
+    margin-top: 4px;
+  }
+}
+
+@keyframes showMessege {
+  0% {
+    translate: 0 100%;
+  }
+
+  100% {
+    translate: 0 0;
+  }
+}
